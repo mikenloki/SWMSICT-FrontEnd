@@ -7,8 +7,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Navbar from 'components/Navbar';
+import SignupBox from 'components/SignupBox';
+import SignInBox from 'components/SignInBox';
+import WouldYouLike from 'components/WouldYouLike';
 import './style.css';
 import './styleM.css';
+
 
 export default class Results extends React.PureComponent {
   constructor(){
@@ -42,6 +46,7 @@ export default class Results extends React.PureComponent {
 
   }/*End Function*/
 
+
   render() {
     return (
       <div className="container">
@@ -52,6 +57,7 @@ export default class Results extends React.PureComponent {
         </header>
 
         <main>
+
           <h1 className="openingHeader">Results Page</h1>
 
         <div className="choicesWrapper">
@@ -88,9 +94,11 @@ export default class Results extends React.PureComponent {
 
 
 
+
+
         </main>
 
-        <footer></footer>
+
       </div>
     );
   }
