@@ -64,7 +64,10 @@ export default class Results extends React.PureComponent {
           <h2 className="choicesHeader1">Sort Data By:</h2>
           <h2 className="choicesHeader2"> Fees </h2>
           <h2 className="choicesHeader3"> Performance </h2>
-          <h2 className="choicesHeader4"> Hi-Lo  or  Lo-Hi </h2>
+          <div className="choicesWrapperSub1">
+            <h2 className="choicesHeader4">Special Offers</h2>
+            <h2 className="choicesHeader5">Physical Location</h2>
+          </div>
         </div>{/*End className "choicesWrapper"*/}
 
         <div className="inputWrapper">
@@ -75,7 +78,14 @@ export default class Results extends React.PureComponent {
           <h3 className="inputHeader3"><div className="content">
                   <input type="checkBox" onChange={this.handlePassword}/>High-Low<p className="subScript">(Default: Low-High)</p>
                 </div></h3>
-          <h3 className="inputHeader4"> Hi-Lo  or  Lo-Hi </h3>
+          <div className="inputWrapperSub1">
+            <h3 className="inputHeader4"><div className="content">
+                    <input type="checkBox" onChange={this.handlePassword}/>Yes
+                  </div></h3>
+            <h3 className="inputHeader5"><div className="content">
+                    <input type="checkBox" onChange={this.handlePassword}/>Yes
+                  </div></h3>
+          </div>
         </div>{/*End className "choicesWrapper"*/}
 
           <div className="resultsPage">/* Currently a simple placeholder.*/
