@@ -1,6 +1,6 @@
 /* Home Mobile Styles */
 
-@media(max-width:425px) {
+@media(max-width:768px) {
   .artleList {
     flex-direction:column;
   }
@@ -10,5 +10,66 @@
     margin-right: 0;
     margin-left: 0;
   }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    /*float: left;*/
+    width:100%;
+    margin: 5px;
+    font-size: 0.8em;
+    text-align: center;
+    align-items: center;
+  }
+
+  .choicesWrapper {
+    width: 48%;
+    height: 48%;
+    /*float: right;*/
+    display: flex;
+    color: beige;
+    margin-right: 15px;
+    flex-direction: column;
+    align-self: flex-start;
+    background: rgba(50,50,50,0.4);
+  }
+
+  .inputWrapper {
+    width: 48%;
+    height: 100%;
+    /*float: right;*/
+    display: flex;
+    margin-right: 15px;
+    color: beige;
+    flex-direction: column;
+    align-self: flex-start;
+    background: rgba(50,50,50,0.4);
+  }
+
+
+  .choicesHeader1 {
+    width: 56%;
+    height: 100%;
+    /*float: right;*/
+    display: flex;
+    text-align: center;
+    margin: 5px;
+    text-decoration-color: rgba(255,255,255,1);
+    font-size:1.75em;
+    flex-direction: row;
+    align-self: flex-start;
+    background: rgba(255,255,255,0);
+  }
+
+  .choicesWrapperSub1 {
+    width: 36%;
+    height: 100%;
+    /*float: right;*/
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    background: rgba(255,255,255,0);
+  }
+
 
 }

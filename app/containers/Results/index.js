@@ -25,11 +25,11 @@ export default class Results extends React.PureComponent {
 
 
   componentWillMount() {
-  //  this.getNewsletters();
+    this.getProducts();
   }
 
-  /*getNewsletters = () => {
-    fetch('http://localhost:8000/api/getNewsletters', {
+  getProducts = () => {
+    fetch('http://localhost:8000/api/getProducts', {
       method:'get'
     })
     .then(function(response) {
@@ -37,19 +37,27 @@ export default class Results extends React.PureComponent {
     })
     .then(function(json){
       this.setState({
-        newsletters:json.newsletters
+        products: json.getProducts
       })
     }.bind(this))
-  };*/
+  };
 
   getResults = () => {
 
   }/*End Function*/
 
+  sortResultsByKey = (array, key) => {
+    return array.sort(function(a, b){
+      let x = a[key];
+      let y = b[key];
+      return((x < y) ? -1 : 0);
+    })
+  }/*End Function*/
+
 
   render() {
     return (
-      <div className="container">
+      <div className="container resultsContainer">
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
 
         <header>
@@ -60,36 +68,52 @@ export default class Results extends React.PureComponent {
 
           <h1 className="openingHeader">Results Page</h1>
 
-        <div className="choicesWrapper">
-          <h2 className="choicesHeader1">Sort Data By:</h2>
-          <h2 className="choicesHeader2"> Fees </h2>
-          <h2 className="choicesHeader3"> Performance </h2>
-          <div className="choicesWrapperSub1">
-            <h2 className="choicesHeader4">Special Offers</h2>
-            <h2 className="choicesHeader5">Physical Location</h2>
-          </div>
-        </div>{/*End className "choicesWrapper"*/}
+          <div className="mobileWrapper">
+            <div className="choicesWrapper">
+              <h2 className="choicesHeader1">Sort Data By:</h2>
+              <h3 className="choicesHeader2"> Fees </h3>
+              <h3 className="choicesHeader3"> Performance </h3>
+              <div className="choicesWrapperSub1">
+                <h3 className="choicesHeader4">Special Offers</h3>
+                <h3 className="choicesHeader5">Physical Location</h3>
+              </div>
+            </div>{/*End className "choicesWrapper"*/}
 
-        <div className="inputWrapper">
-          <h3 className="inputHeader1"></h3>
-          <h3 className="inputHeader2"><div className="content">
-                  <input type="checkBox" onChange={this.handlePassword}/>High-Low<p className="subScript">(Default: Low-High)</p>
-                </div></h3>
-          <h3 className="inputHeader3"><div className="content">
-                  <input type="checkBox" onChange={this.handlePassword}/>High-Low<p className="subScript">(Default: Low-High)</p>
-                </div></h3>
-          <div className="inputWrapperSub1">
-            <h3 className="inputHeader4"><div className="content">
-                    <input type="checkBox" onChange={this.handlePassword}/>Yes
-                  </div></h3>
-            <h3 className="inputHeader5"><div className="content">
-                    <input type="checkBox" onChange={this.handlePassword}/>Yes
-                  </div></h3>
-          </div>
-        </div>{/*End className "choicesWrapper"*/}
+            <div className="inputWrapper">
 
-          <div className="resultsPage">/* Currently a simple placeholder.*/
-            <p>Greetings!</p>
+              <h3 className="inputHeader1"></h3>
+
+              <h3 className="inputHeader2">
+                <div className="content">
+                  <input type="checkBox" onChange={this.handlePassword}/>High-Low
+                  <input type="checkBox" onChange={this.handlePassword}/>Low-High
+                </div>
+              </h3>
+
+              <h3 className="inputHeader3">
+                <div className="content">
+                  <input type="checkBox" onChange={this.handlePassword}/>High-Low
+                  <input type="checkBox" onChange={this.handlePassword}/>Low-High
+                </div>
+              </h3>
+
+              <div className="inputWrapperSub1">
+                <h3 className="inputHeader4">
+                  <div className="content">
+                    <input type="checkBox" onChange={this.handlePassword}/>Yes
+                  </div>
+                </h3>
+
+                <h3 className="inputHeader5">
+                  <div className="content">
+                    <input type="checkBox" onChange={this.handlePassword}/>Yes
+                  </div>
+                </h3>
+              </div>{/*End className "inputWrapperSub1"*/}
+            </div>{/*End className "inputWrapper"*/}
+          </div> {/*End className "mobileWrapper"*/}
+        
+          <div className="resultsPage"><p>  Greetings! /* Currently a simple placeholder.*/</p>
             <div className="productSummary">
               This is where a Product Summary will be.
             </div>
