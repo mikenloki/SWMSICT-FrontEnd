@@ -1,6 +1,6 @@
 /*
  *
- * Home
+ * Results Page
  *
  */
 
@@ -19,40 +19,20 @@ export default class Results extends React.PureComponent {
     super();
     this.state={
       products:[]
-
     }
   }
 
-
-  componentWillMount() {
-    this.getProducts();
-  }
-
-  getProducts = () => {
-    fetch('http://localhost:8000/api/getProducts', {
-      method:'get'
-    })
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(json){
-      this.setState({
-        products: json.getProducts
-      })
-    }.bind(this))
-  };
-
   getResults = () => {
-
+    /* Not entirely sure that this is still needed.*/
   }/*End Function*/
 
-  sortResultsByKey = (array, key) => {
+  /*sortResultsByKey = (array, key) => {
     return array.sort(function(a, b){
       let x = a[key];
       let y = b[key];
       return((x < y) ? -1 : 0);
     })
-  }/*End Function*/
+  }*//*End Function*/
 
 
   render() {
@@ -112,12 +92,11 @@ export default class Results extends React.PureComponent {
               </div>{/*End className "inputWrapperSub1"*/}
             </div>{/*End className "inputWrapper"*/}
           </div> {/*End className "mobileWrapper"*/}
-        
+
           <div className="resultsPage"><p>  Greetings! /* Currently a simple placeholder.*/</p>
             <div className="productSummary">
               This is where a Product Summary will be.
-            </div>
-            /*<div className="todoList">
+            </div>/*<div className="productSummary">
             {this.state.products.map((product, index) => (
               <div className="listItem" key={index} >{product.name} {product.content}{product.fundPerformance}
               </div>

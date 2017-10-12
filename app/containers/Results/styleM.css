@@ -11,6 +11,11 @@
     margin-left: 0;
   }
 
+  .mobileWrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
   .content {
     display: flex;
     flex-direction: row;
@@ -36,14 +41,25 @@
 
   .inputWrapper {
     width: 48%;
-    height: 100%;
+    height: 48%;
     /*float: right;*/
     display: flex;
     margin-right: 15px;
+    margin-top: 2px;
     color: beige;
     flex-direction: column;
     align-self: flex-start;
     background: rgba(50,50,50,0.4);
+  }
+
+  .inputWrapperSub1 {
+    width: 36%;
+    height: 100%;
+    /*float: right;*/
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    background: rgba(255,255,255,0);
   }
 
 
@@ -55,7 +71,7 @@
     text-align: center;
     margin: 5px;
     text-decoration-color: rgba(255,255,255,1);
-    font-size:1.75em;
+    font-size:0.75em;
     flex-direction: row;
     align-self: flex-start;
     background: rgba(255,255,255,0);

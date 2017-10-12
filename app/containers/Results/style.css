@@ -233,13 +233,14 @@ input[type=checkbox]:hover {
 }
 
 .resultsPage{
-  width: 96%;
-  height: 100%;
+  width: 94%;
+  height: auto;
   display: flex;
   /*margin-left: 2%;
   margin-right: 2%;
   margin-top: 10px;*/
-  margin: auto;
+  margin-right: 3%;
+  margin-left: 3%;
   margin-top: 10px;
   flex-direction: column;
   justify-content: center;
