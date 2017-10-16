@@ -47,7 +47,8 @@ input[type=checkbox]:hover {
 
 .openingHeader {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  text-align: center;
   color: blue;
   justify-content: center;
   border-bottom: 4px solid #FF0000;
@@ -55,6 +56,10 @@ input[type=checkbox]:hover {
 
 .underScore{
   color: red;
+}
+
+.selectWrapper {
+  justify-content: center;
 }
 
 /* Banners. 1) choicesWrapper, et al. 2) inputWrapper, et al. */
