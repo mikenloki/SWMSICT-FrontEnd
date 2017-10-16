@@ -201,13 +201,13 @@
           <div className="selectWrapper">
             <select Classname="select">
               <optgroup label="Sort by: Fees">
-                <option value="value1">Low to High</option>
-                <option value="value2">High to Low</option>
+                <option value="value1" onClick={() => this.getProducts(this.state.searchData, 'fees', 'asc')}>Low to High</option>
+                <option value="value2" onClick={() => this.getProducts(this.state.searchData, 'fees', 'desc')}>High to Low</option>
               </optgroup>
 
               <optgroup label="Sort by: Performance">
-                <option value="value3">Low to High</option>
-                <option value="value4">High to Low</option>
+                <option value="value3" onClick={() => this.getProducts(this.state.searchData, 'performance', 'asc')}>Low to High</option>
+                <option value="value4" onClick={() => this.getProducts(this.state.searchData, 'performance', 'desc')}>High to Low</option>
               </optgroup>
             </select>
           </div>
@@ -266,7 +266,7 @@
             <div className="productSummary">
               This is where another Product Summary will be.
             </div>
-            
+
             <div className="productSummary">
               This is where another Product Summary will be.
 
