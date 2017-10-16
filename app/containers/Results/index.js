@@ -200,10 +200,15 @@
 
           <div className="selectWrapper">
             <select Classname="select">
-              <option value="value1">Sort: by Fees - Low to High</option>
-              <option value="value2">Sort: by Fees - High to Low</option>
-              <option value="value3">Sort: by Performance - Low to High</option>
-              <option value="value4">Sort: by Performance - High to Low</option>
+              <optgroup label="Sort by: Fees">
+                <option value="value1">Low to High</option>
+                <option value="value2">High to Low</option>
+              </optgroup>
+
+              <optgroup label="Sort by: Performance">
+                <option value="value3">Low to High</option>
+                <option value="value4">High to Low</option>
+              </optgroup>
             </select>
           </div>
 
@@ -253,8 +258,18 @@
             {/*}</div>{/*End className "inputWrapper"*/}
           {/*}</div> {/*End className "mobileWrapper"*/}
 
-          <div className="resultsPage">
+          <div className="resultsPage"><p>  Greetings! /* Currently a simple placeholder.*/</p>
             <div className="productSummary">
+              This is where a Product Summary will be.
+            </div>
+
+            <div className="productSummary">
+              This is where another Product Summary will be.
+            </div>
+            
+            <div className="productSummary">
+              This is where another Product Summary will be.
+
 
 
             {this.renderResults()}

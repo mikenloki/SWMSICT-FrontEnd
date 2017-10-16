@@ -59,7 +59,9 @@ input[type=checkbox]:hover {
 }
 
 .selectWrapper {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Banners. 1) choicesWrapper, et al. 2) inputWrapper, et al. */
